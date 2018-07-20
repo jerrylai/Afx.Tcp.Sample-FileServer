@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Cmd>
+    <Global defaultAssembly="AfxTcpFileServerSample.Controllers">
+        <Authorize type=""></Authorize>
+    </Global>
+    <Controller>
+        <Action cmd="1001" method="Login" type="AfxTcpFileServerSample.Controllers.UserController"></Action>
+        <Action cmd="1002" method="Logout" type="AfxTcpFileServerSample.Controllers.UserController"></Action>
+        <Action cmd="1003" method="UpdatePassword" type="AfxTcpFileServerSample.Controllers.UserController"></Action>
+        
+        <Action cmd="2001" method="Get" type="AfxTcpFileServerSample.Controllers.RoleController"></Action>
+        <Action cmd="2002" method="GetList" type="AfxTcpFileServerSample.Controllers.RoleController"></Action>
+        <Action cmd="2003" method="Add" type="AfxTcpFileServerSample.Controllers.RoleController"></Action>
+        <Action cmd="2004" method="Update" type="AfxTcpFileServerSample.Controllers.RoleController"></Action>
+        <Action cmd="2005" method="Delete" type="AfxTcpFileServerSample.Controllers.RoleController"></Action>
+        <Action cmd="2007" method="Exist" type="AfxTcpFileServerSample.Controllers.RoleController"></Action>
+        <Action cmd="2008" method="GetUserCount" type="AfxTcpFileServerSample.Controllers.RoleController"></Action>
+        <Action cmd="2006" method="GetAuthList" type="AfxTcpFileServerSample.Controllers.RoleAuthController"></Action>
+
+        <Action cmd="3001" method="Get" type="AfxTcpFileServerSample.Controllers.UserController"></Action>
+        <Action cmd="3002" method="GetPageList" type="AfxTcpFileServerSample.Controllers.UserController"></Action>
+        <Action cmd="3003" method="Add" type="AfxTcpFileServerSample.Controllers.UserController"></Action>
+        <Action cmd="3004" method="Update" type="AfxTcpFileServerSample.Controllers.UserController"></Action>
+        <Action cmd="3006" method="Exist" type="AfxTcpFileServerSample.Controllers.UserController"></Action>
+        <Action cmd="3005" method="Delete" type="AfxTcpFileServerSample.Controllers.UserController"></Action>
+
+        <Action cmd="11001" method="Get" type="AfxTcpFileServerSample.Controllers.FileInfoController"></Action>
+        <Action cmd="11003" method="Exist" type="AfxTcpFileServerSample.Controllers.FileInfoController"></Action>
+        <Action cmd="11005" method="Delete" type="AfxTcpFileServerSample.Controllers.FileInfoController"></Action>
+        <Action cmd="11002" method="GetPageList" type="AfxTcpFileServerSample.Controllers.FileInfoController"></Action>
+        <Action cmd="11004" method="GetSysList" type="AfxTcpFileServerSample.Controllers.FileInfoController"></Action>
+        
+        <Action cmd="4007" method="RestCheck" type="AfxTcpFileServerSample.Controllers.FileInfoController"></Action>
+        
+        <Action cmd="5001" method="GetPageList" type="AfxTcpFileServerSample.Controllers.OptionLogController"></Action>
+
+        <Action cmd="11006" method="CreateFile" type="AfxTcpFileServerSample.Controllers.FileController"></Action>
+        <Action cmd="11007" method="UploadFileData" type="AfxTcpFileServerSample.Controllers.FileController"></Action>
+        <Action cmd="11008" method="CreateFileCompleted" type="AfxTcpFileServerSample.Controllers.FileController"></Action>
+        <Action cmd="11009" method="OpenFile" type="AfxTcpFileServerSample.Controllers.FileController"></Action>
+        <Action cmd="11010" method="GetFileData" type="AfxTcpFileServerSample.Controllers.FileController"></Action>
+        <Action cmd="11011" method="CloseFile" type="AfxTcpFileServerSample.Controllers.FileController"></Action>
+        <Action cmd="11012" method="CreateDirectory" type="AfxTcpFileServerSample.Controllers.FileController"></Action>
+        <Action cmd="11013" method="DeleteOpenFile" type="AfxTcpFileServerSample.Controllers.FileController"></Action>
+        <Action cmd="11014" method="GetPhysicaPath" type="AfxTcpFileServerSample.Controllers.FileController"></Action>
+        <Action cmd="11015" method="AddFileInfo" type="AfxTcpFileServerSample.Controllers.FileController"></Action>
+        
+        
+    </Controller>
+</Cmd>

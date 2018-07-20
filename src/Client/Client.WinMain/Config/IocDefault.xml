@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+    <!-- 指定接口默认实现类 -->
+    <!--<Interface name="Client.IService.IFileClient" value="Client.Service.FileClient" />-->
+</Config>

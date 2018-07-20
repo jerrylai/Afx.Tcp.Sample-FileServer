@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+    <ListDb db="0">
+        <Role key="role_list"></Role>
+        <ServerInfo key="server_info_list"></ServerInfo>
+        <UpdateInfo key="update_info_list"></UpdateInfo>
+    </ListDb>
+    <DataDb db="1">
+        <SysConfig key="sys_config_list:{0}"></SysConfig>
+        <ServerSyncType key="server_sync_type_list:{0}"></ServerSyncType>
+        <User key="user:{0}"></User>
+        <UserId key="user_id:{0}"></UserId>
+        <RoleAuth key="role_auth:{0}"></RoleAuth>
+    </DataDb>
+</Config>

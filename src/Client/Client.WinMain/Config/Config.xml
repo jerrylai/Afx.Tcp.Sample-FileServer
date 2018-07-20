@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+    <Root>
+        <Server host="localhost:2100" />
+        <DesKey value="$Afx@cn#" />
+    </Root>
+    <User>
+        <RememberPassword value="true" />
+        <Account value="admin" />
+        <Password value="507E280D229D881F09365D4FF91F6654" />
+        <LocalPath value="D:\test" />
+        <ServerPathId value="0" />
+    </User>
+    <Ioc>
+        <Service assembly="Client.Service" />
+    </Ioc>
+</Config>

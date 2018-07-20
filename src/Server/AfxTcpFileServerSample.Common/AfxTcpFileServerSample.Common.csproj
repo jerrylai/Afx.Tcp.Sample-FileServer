@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82C44898-5782-4348-83AB-7624DBB17494}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AfxTcpFileServerSample.Common</RootNamespace>
+    <AssemblyName>AfxTcpFileServerSample.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Afx.Base, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Base.6.2.10\lib\net452\Afx.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Afx.Cache, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Cache.6.2.10\lib\net452\Afx.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StackExchange.Redis.1.2.6\lib\net45\StackExchange.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aop\AopLog.cs" />
+    <Compile Include="Exception\StatusException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserFile.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="Utils\CacheKeyUtils.cs" />
+    <Compile Include="Utils\ConfigUtils.cs" />
+    <Compile Include="Utils\EncryptUtils.cs" />
+    <Compile Include="Utils\IocUtils.cs" />
+    <Compile Include="Utils\JsonUtils.cs" />
+    <Compile Include="Utils\LogUtils.cs" />
+    <Compile Include="Utils\SessionUtils.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <Compile Include="Utils\RedisUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AfxTcpFileServerSample.Enums\AfxTcpFileServerSample.Enums.csproj">
+      <Project>{427e6350-e768-4e36-9ea0-642b572e892d}</Project>
+      <Name>AfxTcpFileServerSample.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AfxTcpFileServerSample.ICache\AfxTcpFileServerSample.ICache.csproj">
+      <Project>{cbe48909-9d76-45ae-a0bd-8579dc53425d}</Project>
+      <Name>AfxTcpFileServerSample.ICache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AfxTcpFileServerSample.IRepository\AfxTcpFileServerSample.IRepository.csproj">
+      <Project>{535cedd4-70d3-4aac-86d4-008d55f61d68}</Project>
+      <Name>AfxTcpFileServerSample.IRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AfxTcpFileServerSample.IService\AfxTcpFileServerSample.IService.csproj">
+      <Project>{6a4237c2-0cd8-4a95-9667-bd86b364be7b}</Project>
+      <Name>AfxTcpFileServerSample.IService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

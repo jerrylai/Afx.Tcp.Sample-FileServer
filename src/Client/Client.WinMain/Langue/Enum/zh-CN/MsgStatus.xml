@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MsgStatus>
+  <None displayName="None" description="None" />
+  <Succeed displayName="成功" description="成功" />
+  <Error displayName="None" description="None">失败</Error>
+  <ServerError displayName="服务器错误" description="服务器错误" />
+  <NeedLogin displayName="未登录" description="未登录"></NeedLogin>
+  <NeedAuth displayName="需要权限" description="需要权限" />
+  <Unknown displayName="未知请求" description="未知请求" />
+</MsgStatus>

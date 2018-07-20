@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+    <Root>
+        <Server port="2100" ip="" />
+        <FileRoot path="~\FilePath\" />
+        <Encrypt desKey="$Afx@cn#" />
+        <Database type="SQLite" init="True" isLog="True" />
+        <SQLite connectionString="Data Source=Database\FileSystem.db;Version=3;UseUTF16Encoding=False;DateTimeKind=Local" />
+        <MySQL connectionString="Server=db.mainyun.cn;Port=3306;Database=AfxDotNetSample;User Id=root;Password=123@abc;CharacterSet=utf8" />
+        <MSSQLServer connectionString="Data Source=127.0.0.1,1433;Initial Catalog=AfxDotNetSample;User ID=sa;Password=123456" />
+        <Oracle connectionString="Data Source=127.0.0.1:1521/ORCL;User ID=AfxDotNetSample;Password=123" />
+        <Cache type="Proc" prefix="AfxTcpFileServerSample:" />
+        <Redis config="127.0.0.1:6379" />
+        <IdGenerator serverId="1000" cacheCount="10" />
+    </Root>
+    <Ioc>
+        <Service assembly="AfxTcpFileServerSample.Service" />
+        <Repository assembly="AfxTcpFileServerSample.Repository" />
+        <Cache assembly="AfxTcpFileServerSample.Cache" />
+    </Ioc>
+</Config>

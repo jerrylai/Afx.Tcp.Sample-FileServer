@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4DEEAC3B-3AF7-4AA8-8163-0FC8208E5D09}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AfxTcpFileServerSample.WinService</RootNamespace>
+    <AssemblyName>AfxTcpFileServerSample.WinService</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Afx.Base, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Base.6.2.10\lib\net452\Afx.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Afx.Cache, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Cache.6.2.10\lib\net452\Afx.Cache.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Afx.Data, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.6.2.10\lib\net452\Afx.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Afx.Data.Entity, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.Entity.6.2.10\lib\net452\Afx.Data.Entity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Afx.Data.Extensions, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.Extensions.6.2.10\lib\net452\Afx.Data.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Afx.Data.MSSQLServer.Entity, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.MSSQLServer.Entity.6.2.10\lib\net452\Afx.Data.MSSQLServer.Entity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Afx.Data.MySql.Entity, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.MySql.Entity.6.2.10\lib\net452\Afx.Data.MySql.Entity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Afx.Data.Oracle.Entity, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.Oracle.Entity.6.2.10\lib\net452\Afx.Data.Oracle.Entity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Afx.Data.SQLite.Entity, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.SQLite.Entity.6.2.10\lib\net452\Afx.Data.SQLite.Entity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Afx.Sockets, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Sockets.6.2.10\lib\net452\Afx.Sockets.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Afx.Tcp.Host, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Tcp.Host.6.2.10\lib\net452\Afx.Tcp.Host.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Afx.Tcp.Protocols, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Tcp.Protocols.6.2.10\lib\net452\Afx.Tcp.Protocols.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.7\lib\net452\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.10.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MySql.Data.Entity.6.10.7\lib\net452\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.12.2.1100\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.3.13.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.3.13\lib\net40\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StackExchange.Redis.1.2.6\lib\net45\StackExchange.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.108.0\lib\net451\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.108.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainService.Designer.cs">
+      <DependentUpon>MainService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AfxTcpFileServerSample.Cache\AfxTcpFileServerSample.Cache.csproj">
+      <Project>{c13c26f4-49f6-444e-9099-490d022e775a}</Project>
+      <Name>AfxTcpFileServerSample.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AfxTcpFileServerSample.Common\AfxTcpFileServerSample.Common.csproj">
+      <Project>{82c44898-5782-4348-83ab-7624dbb17494}</Project>
+      <Name>AfxTcpFileServerSample.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AfxTcpFileServerSample.Controllers\AfxTcpFileServerSample.Controllers.csproj">
+      <Project>{c9646e54-f196-4827-b4ff-963dec3bb14c}</Project>
+      <Name>AfxTcpFileServerSample.Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AfxTcpFileServerSample.Dto\AfxTcpFileServerSample.Dto.csproj">
+      <Project>{de6cf31e-4c81-424c-9e53-13424c24abc9}</Project>
+      <Name>AfxTcpFileServerSample.Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AfxTcpFileServerSample.Enums\AfxTcpFileServerSample.Enums.csproj">
+      <Project>{427e6350-e768-4e36-9ea0-642b572e892d}</Project>
+      <Name>AfxTcpFileServerSample.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AfxTcpFileServerSample.ICache\AfxTcpFileServerSample.ICache.csproj">
+      <Project>{cbe48909-9d76-45ae-a0bd-8579dc53425d}</Project>
+      <Name>AfxTcpFileServerSample.ICache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AfxTcpFileServerSample.IRepository\AfxTcpFileServerSample.IRepository.csproj">
+      <Project>{535cedd4-70d3-4aac-86d4-008d55f61d68}</Project>
+      <Name>AfxTcpFileServerSample.IRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AfxTcpFileServerSample.IService\AfxTcpFileServerSample.IService.csproj">
+      <Project>{6a4237c2-0cd8-4a95-9667-bd86b364be7b}</Project>
+      <Name>AfxTcpFileServerSample.IService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AfxTcpFileServerSample.Models\AfxTcpFileServerSample.Models.csproj">
+      <Project>{dfccd1d9-5eba-45ff-83ab-f67f9f8efe8c}</Project>
+      <Name>AfxTcpFileServerSample.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AfxTcpFileServerSample.Repository\AfxTcpFileServerSample.Repository.csproj">
+      <Project>{155584c1-6616-4bca-aa04-9a4e72dce725}</Project>
+      <Name>AfxTcpFileServerSample.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AfxTcpFileServerSample.Service\AfxTcpFileServerSample.Service.csproj">
+      <Project>{6935bcfa-32b9-4eb1-b8ca-0b1d60cceccb}</Project>
+      <Name>AfxTcpFileServerSample.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\CacheKey.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\Cmd.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\Config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\IocDefault.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="..\packages\Oracle.ManagedDataAccess.12.2.1100\bin\x64\Oracle.ManagedDataAccessDTC.dll">
+      <Link>x64\Oracle.ManagedDataAccessDTC.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\packages\Oracle.ManagedDataAccess.12.2.1100\bin\x64\Oracle.ManagedDataAccessIOP.dll">
+      <Link>x64\Oracle.ManagedDataAccessIOP.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\packages\Oracle.ManagedDataAccess.12.2.1100\bin\x86\Oracle.ManagedDataAccessDTC.dll">
+      <Link>x86\Oracle.ManagedDataAccessDTC.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\packages\Oracle.ManagedDataAccess.12.2.1100\bin\x86\Oracle.ManagedDataAccessIOP.dll">
+      <Link>x86\Oracle.ManagedDataAccessIOP.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>

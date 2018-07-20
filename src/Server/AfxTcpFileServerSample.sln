@@ -1,0 +1,121 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfxTcpFileServerSample.Dto", "AfxTcpFileServerSample.Dto\AfxTcpFileServerSample.Dto.csproj", "{DE6CF31E-4C81-424C-9E53-13424C24ABC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfxTcpFileServerSample.Enums", "AfxTcpFileServerSample.Enums\AfxTcpFileServerSample.Enums.csproj", "{427E6350-E768-4E36-9EA0-642B572E892D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfxTcpFileServerSample.WinService", "AfxTcpFileServerSample.WinService\AfxTcpFileServerSample.WinService.csproj", "{4DEEAC3B-3AF7-4AA8-8163-0FC8208E5D09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfxTcpFileServerSample.Controllers", "AfxTcpFileServerSample.Controllers\AfxTcpFileServerSample.Controllers.csproj", "{C9646E54-F196-4827-B4FF-963DEC3BB14C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfxTcpFileServerSample.IService", "AfxTcpFileServerSample.IService\AfxTcpFileServerSample.IService.csproj", "{6A4237C2-0CD8-4A95-9667-BD86B364BE7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfxTcpFileServerSample.Service", "AfxTcpFileServerSample.Service\AfxTcpFileServerSample.Service.csproj", "{6935BCFA-32B9-4EB1-B8CA-0B1D60CCECCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfxTcpFileServerSample.IRepository", "AfxTcpFileServerSample.IRepository\AfxTcpFileServerSample.IRepository.csproj", "{535CEDD4-70D3-4AAC-86D4-008D55F61D68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfxTcpFileServerSample.Repository", "AfxTcpFileServerSample.Repository\AfxTcpFileServerSample.Repository.csproj", "{155584C1-6616-4BCA-AA04-9A4E72DCE725}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfxTcpFileServerSample.ICache", "AfxTcpFileServerSample.ICache\AfxTcpFileServerSample.ICache.csproj", "{CBE48909-9D76-45AE-A0BD-8579DC53425D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfxTcpFileServerSample.Cache", "AfxTcpFileServerSample.Cache\AfxTcpFileServerSample.Cache.csproj", "{C13C26F4-49F6-444E-9099-490D022E775A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfxTcpFileServerSample.Models", "AfxTcpFileServerSample.Models\AfxTcpFileServerSample.Models.csproj", "{DFCCD1D9-5EBA-45FF-83AB-F67F9F8EFE8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfxTcpFileServerSample.Common", "AfxTcpFileServerSample.Common\AfxTcpFileServerSample.Common.csproj", "{82C44898-5782-4348-83AB-7624DBB17494}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Dto", "01 Dto", "{8487CF2C-A58D-4A28-858E-DF0907D22E0D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 WinService", "02 WinService", "{3EB4858D-A90F-458F-B72C-DDC3A8621507}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Controller", "03 Controller", "{325CEA3E-6ED0-4E16-AC87-69556B7F2F51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Service", "04 Service", "{B85D7A87-26BE-4F01-83B5-890AB8F119F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 Repository", "05 Repository", "{15E45261-D630-44C4-B933-8752B9ADC968}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06 Cache", "06 Cache", "{013AD3A7-5C5E-41FA-BF58-7D71EC9CAFC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07 Models", "07 Models", "{7C709227-234B-4518-AC6C-F42F3C46894A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08 Common", "08 Common", "{6FE4D691-98C3-4F0D-857B-6BCC8CD55200}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE6CF31E-4C81-424C-9E53-13424C24ABC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE6CF31E-4C81-424C-9E53-13424C24ABC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE6CF31E-4C81-424C-9E53-13424C24ABC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE6CF31E-4C81-424C-9E53-13424C24ABC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{427E6350-E768-4E36-9EA0-642B572E892D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{427E6350-E768-4E36-9EA0-642B572E892D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{427E6350-E768-4E36-9EA0-642B572E892D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{427E6350-E768-4E36-9EA0-642B572E892D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DEEAC3B-3AF7-4AA8-8163-0FC8208E5D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DEEAC3B-3AF7-4AA8-8163-0FC8208E5D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DEEAC3B-3AF7-4AA8-8163-0FC8208E5D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DEEAC3B-3AF7-4AA8-8163-0FC8208E5D09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9646E54-F196-4827-B4FF-963DEC3BB14C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9646E54-F196-4827-B4FF-963DEC3BB14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9646E54-F196-4827-B4FF-963DEC3BB14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9646E54-F196-4827-B4FF-963DEC3BB14C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A4237C2-0CD8-4A95-9667-BD86B364BE7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A4237C2-0CD8-4A95-9667-BD86B364BE7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A4237C2-0CD8-4A95-9667-BD86B364BE7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A4237C2-0CD8-4A95-9667-BD86B364BE7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6935BCFA-32B9-4EB1-B8CA-0B1D60CCECCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6935BCFA-32B9-4EB1-B8CA-0B1D60CCECCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6935BCFA-32B9-4EB1-B8CA-0B1D60CCECCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6935BCFA-32B9-4EB1-B8CA-0B1D60CCECCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{535CEDD4-70D3-4AAC-86D4-008D55F61D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{535CEDD4-70D3-4AAC-86D4-008D55F61D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{535CEDD4-70D3-4AAC-86D4-008D55F61D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{535CEDD4-70D3-4AAC-86D4-008D55F61D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{155584C1-6616-4BCA-AA04-9A4E72DCE725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{155584C1-6616-4BCA-AA04-9A4E72DCE725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{155584C1-6616-4BCA-AA04-9A4E72DCE725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{155584C1-6616-4BCA-AA04-9A4E72DCE725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBE48909-9D76-45AE-A0BD-8579DC53425D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE48909-9D76-45AE-A0BD-8579DC53425D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE48909-9D76-45AE-A0BD-8579DC53425D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE48909-9D76-45AE-A0BD-8579DC53425D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C13C26F4-49F6-444E-9099-490D022E775A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C13C26F4-49F6-444E-9099-490D022E775A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C13C26F4-49F6-444E-9099-490D022E775A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C13C26F4-49F6-444E-9099-490D022E775A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFCCD1D9-5EBA-45FF-83AB-F67F9F8EFE8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFCCD1D9-5EBA-45FF-83AB-F67F9F8EFE8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFCCD1D9-5EBA-45FF-83AB-F67F9F8EFE8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFCCD1D9-5EBA-45FF-83AB-F67F9F8EFE8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82C44898-5782-4348-83AB-7624DBB17494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82C44898-5782-4348-83AB-7624DBB17494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82C44898-5782-4348-83AB-7624DBB17494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82C44898-5782-4348-83AB-7624DBB17494}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DE6CF31E-4C81-424C-9E53-13424C24ABC9} = {8487CF2C-A58D-4A28-858E-DF0907D22E0D}
+		{427E6350-E768-4E36-9EA0-642B572E892D} = {8487CF2C-A58D-4A28-858E-DF0907D22E0D}
+		{4DEEAC3B-3AF7-4AA8-8163-0FC8208E5D09} = {3EB4858D-A90F-458F-B72C-DDC3A8621507}
+		{C9646E54-F196-4827-B4FF-963DEC3BB14C} = {325CEA3E-6ED0-4E16-AC87-69556B7F2F51}
+		{6A4237C2-0CD8-4A95-9667-BD86B364BE7B} = {B85D7A87-26BE-4F01-83B5-890AB8F119F7}
+		{6935BCFA-32B9-4EB1-B8CA-0B1D60CCECCB} = {B85D7A87-26BE-4F01-83B5-890AB8F119F7}
+		{535CEDD4-70D3-4AAC-86D4-008D55F61D68} = {15E45261-D630-44C4-B933-8752B9ADC968}
+		{155584C1-6616-4BCA-AA04-9A4E72DCE725} = {15E45261-D630-44C4-B933-8752B9ADC968}
+		{CBE48909-9D76-45AE-A0BD-8579DC53425D} = {013AD3A7-5C5E-41FA-BF58-7D71EC9CAFC8}
+		{C13C26F4-49F6-444E-9099-490D022E775A} = {013AD3A7-5C5E-41FA-BF58-7D71EC9CAFC8}
+		{DFCCD1D9-5EBA-45FF-83AB-F67F9F8EFE8C} = {7C709227-234B-4518-AC6C-F42F3C46894A}
+		{82C44898-5782-4348-83AB-7624DBB17494} = {6FE4D691-98C3-4F0D-857B-6BCC8CD55200}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE7CBD78-1C14-4DDA-8C1B-B141CC7B6255}
+	EndGlobalSection
+EndGlobal
