@@ -13,9 +13,8 @@ namespace AfxTcpFileServerSample.Controllers
     public class RoleAuthController : BaseController
     {
         [Auth(AuthType.System)]
-        public ActionResult GetAuthList()
+        public ActionResult GetAuthList(int roleId)
         {
-            var roleId = this.GetData<int>();
             if (roleId > 0)
             {
                 var roleAuthService = this.GetService<IRoleAuthService>();
@@ -24,7 +23,7 @@ namespace AfxTcpFileServerSample.Controllers
                 return Success(result);
             }
 
-            return ParamError();
+            return Error();
         }
     }
 }

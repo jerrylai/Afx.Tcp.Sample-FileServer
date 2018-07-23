@@ -13,9 +13,8 @@ namespace AfxTcpFileServerSample.Controllers
     public class OptionLogController : BaseController
     {
         [Auth(AuthType.System)]
-        public ActionResult GetPageList()
+        public ActionResult GetPageList(OptionLogPageParamDto vm)
         {
-            var vm = this.GetData<OptionLogPageParamDto>();
             if (vm != null && vm.Index > 0 && vm.Size > 0)
             {
                 var optionLogService = this.GetService<IOptionLogService>();
@@ -24,7 +23,7 @@ namespace AfxTcpFileServerSample.Controllers
                 return Success(result);
             }
 
-            return ParamError();
+            return Error();
         }
     }
 }

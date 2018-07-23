@@ -13,9 +13,8 @@ namespace AfxTcpFileServerSample.Controllers
     public class FileInfoController : BaseController
     {
         [Auth(AuthType.ReadFile)]
-        public ActionResult Get()
+        public ActionResult Get(int id)
         {
-            int id = this.GetData<int>();
             if(id > 0)
             {
                 var fileInfoService = this.GetService<IFileInfoService>();
@@ -24,13 +23,12 @@ namespace AfxTcpFileServerSample.Controllers
                 return Success(m);
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(new AuthType[] { AuthType.ReadFile, AuthType.WriteFile })]
-        public ActionResult Exist()
+        public ActionResult Exist(FileInfoParamDto vm)
         {
-            FileInfoParamDto vm = this.GetData<FileInfoParamDto>();
             if (vm != null && !string.IsNullOrEmpty(vm.Name) && vm.Type != (int)FileInfoType.None)
             {
                 var fileInfoService = this.GetService<IFileInfoService>();
@@ -39,14 +37,13 @@ namespace AfxTcpFileServerSample.Controllers
                 return Success(result);
             }
 
-            return ParamError();
+            return Error();
         }
 
 
         [Auth(AuthType.WriteFile)]
-        public ActionResult Delete()
+        public ActionResult Delete(int id)
         {
-            int id = this.GetData<int>();
             var fileInfoService = this.GetService<IFileInfoService>();
             bool result = fileInfoService.Delete(id);
 
@@ -54,9 +51,8 @@ namespace AfxTcpFileServerSample.Controllers
         }
 
         [Auth(AuthType.ReadFile)]
-        public ActionResult GetPageList()
+        public ActionResult GetPageList(FileInfoPageParamDto vm)
         {
-            var vm = this.GetData<FileInfoPageParamDto>();
             if(vm != null && vm.Index > 0 && vm.Size > 0)
             {
                 var fileInfoService = this.GetService<IFileInfoService>();
@@ -65,13 +61,12 @@ namespace AfxTcpFileServerSample.Controllers
                 return Success(data);
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.System)]
-        public ActionResult GetSysList()
+        public ActionResult GetSysList(SyncParamDto vm)
         {
-            SyncParamDto vm = this.GetData<SyncParamDto>();
             if (vm != null && vm.Count > 0)
             {
                 var fileInfoService = this.GetService<IFileInfoService>();
@@ -80,7 +75,7 @@ namespace AfxTcpFileServerSample.Controllers
                 return Success(data);
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.System)]

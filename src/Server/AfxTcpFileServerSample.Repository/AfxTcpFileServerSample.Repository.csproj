@@ -30,11 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Afx.Data, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Data.6.2.10\lib\net452\Afx.Data.dll</HintPath>
+    <Reference Include="Afx.Data, Version=6.2.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.6.2.11\lib\net452\Afx.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Afx.Data.Entity, Version=6.2.10.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Data.Entity.6.2.10\lib\net452\Afx.Data.Entity.dll</HintPath>
+    <Reference Include="Afx.Data.Entity, Version=6.2.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.Entity.6.2.11\lib\net452\Afx.Data.Entity.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>

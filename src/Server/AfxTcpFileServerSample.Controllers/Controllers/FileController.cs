@@ -13,9 +13,8 @@ namespace AfxTcpFileServerSample.Controllers
     public class FileController : BaseController
     {
         [Auth(AuthType.WriteFile)]
-        public ActionResult CreateFile()
+        public ActionResult CreateFile(CreateFileParamDto vm)
         {
-            CreateFileParamDto vm = this.GetData<CreateFileParamDto>();
             if(this.UserInfo.File.OpenType != FileOpenType.None)
             {
                 return Failure("当前已打开其它文件，请先关闭其它文件！");
@@ -31,13 +30,12 @@ namespace AfxTcpFileServerSample.Controllers
                 }
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.WriteFile)]
-        public ActionResult UploadFileData()
+        public ActionResult UploadFileData(FileDataDto vm)
         {
-            FileDataDto vm = this.GetData<FileDataDto>();
             if(vm != null && this.UserInfo.File.OpenType == FileOpenType.Write)
             {
                 FileDataParamDto fileDataParam = null;
@@ -48,7 +46,7 @@ namespace AfxTcpFileServerSample.Controllers
                 }
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.WriteFile)]
@@ -99,7 +97,7 @@ namespace AfxTcpFileServerSample.Controllers
                 }
             }
 
-            return ParamError();
+            return Error();
         }
 
         public ActionResult CloseFile()
@@ -115,9 +113,8 @@ namespace AfxTcpFileServerSample.Controllers
         }
 
         [Auth(AuthType.WriteFile)]
-        public ActionResult CreateDirectory()
+        public ActionResult CreateDirectory(CreateDirectoryParamDto vm)
         {
-            CreateDirectoryParamDto vm = this.GetData<CreateDirectoryParamDto>();
             if(vm != null && !string.IsNullOrEmpty(vm.Name)
                 && vm.CreationTime != DateTime.MinValue && vm.LastWriteTime != DateTime.MinValue)
             {
@@ -127,7 +124,7 @@ namespace AfxTcpFileServerSample.Controllers
                 return Success(result);
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.WriteFile)]
@@ -140,9 +137,8 @@ namespace AfxTcpFileServerSample.Controllers
         }
 
         [Auth(new AuthType[] { AuthType.ReadFile, AuthType.WriteFile })]
-        public ActionResult GetPhysicaPath()
+        public ActionResult GetPhysicaPath(string path)
         {
-            string path = this.GetData<string>();
             var fileService = this.GetService<IFileService>();
             var result = fileService.GetPhysicaPath(path);
 
@@ -150,9 +146,8 @@ namespace AfxTcpFileServerSample.Controllers
         }
 
         [Auth(AuthType.WriteFile)]
-        public ActionResult AddFileInfo()
+        public ActionResult AddFileInfo(AddFileInfoDto vm)
         {
-            AddFileInfoDto vm = this.GetData<AddFileInfoDto>();
             if(vm != null)
             {
                 var fileService = this.GetService<IFileService>();
@@ -161,7 +156,7 @@ namespace AfxTcpFileServerSample.Controllers
                 return Success(result);
             }
 
-            return ParamError();
+            return Error();
         }
     }
 }

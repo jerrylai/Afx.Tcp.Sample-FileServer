@@ -7,14 +7,17 @@ using AfxTcpFileServerSample.IService;
 using AfxTcpFileServerSample.Enums;
 using Afx.Tcp.Host;
 using AfxTcpFileServerSample.Dto.ProtoBuf;
+using AfxTcpFileServerSample.Common;
+using Afx.Tcp.Protocols;
+using Afx.Utils;
+using System.Threading.Tasks;
 
 namespace AfxTcpFileServerSample.Controllers
 {
     public class UserController : BaseController
     {
-        public ActionResult Login()
+        public ActionResult Login(LoginParamDto vm)
         {
-            var vm = this.GetData<LoginParamDto>();
             if(vm != null && !string.IsNullOrEmpty(vm.Account) && !string.IsNullOrEmpty(vm.Password))
             {
                 var userService = this.GetService<IUserService>();
@@ -25,7 +28,7 @@ namespace AfxTcpFileServerSample.Controllers
                 }
             }
 
-            return ParamError();
+            return Error();
         }
 
         public ActionResult Logout()
@@ -37,9 +40,8 @@ namespace AfxTcpFileServerSample.Controllers
         }
 
         [Auth]
-        public ActionResult UpdatePassword()
+        public ActionResult UpdatePassword(UpdatePwdDto vm)
         {
-            UpdatePwdDto vm = this.GetData<UpdatePwdDto>();
             if (vm != null && !string.IsNullOrEmpty(vm.OldPassword) && !string.IsNullOrEmpty(vm.NewPassword))
             {
                 var userService = this.GetService<IUserService>();
@@ -47,13 +49,12 @@ namespace AfxTcpFileServerSample.Controllers
                 return Success(result);
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.System)]
-        public ActionResult Get()
+        public ActionResult Get(int id)
         {
-            int id = this.GetData<int>();
             if(id > 0)
             {
                 var userService = this.GetService<IUserService>();
@@ -64,13 +65,12 @@ namespace AfxTcpFileServerSample.Controllers
                 }
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.System)]
-        public ActionResult GetPageList()
+        public ActionResult GetPageList(UserInfoPageParamDto vm)
         {
-            var vm = this.GetData<UserInfoPageParamDto>();
             if (vm != null && vm.Index > 0 && vm.Size > 0)
             {
                 var userService = this.GetService<IUserService>();
@@ -81,13 +81,12 @@ namespace AfxTcpFileServerSample.Controllers
                 }
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.System)]
-        public ActionResult Exist()
+        public ActionResult Exist(string account)
         {
-            string account = this.GetData<string>();
             if (!string.IsNullOrEmpty(account))
             {
                 var userService = this.GetService<IUserService>();
@@ -95,13 +94,12 @@ namespace AfxTcpFileServerSample.Controllers
                 return Success(result);
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.System)]
-        public ActionResult Delete()
+        public ActionResult Delete(int id)
         {
-            int id = this.GetData<int>();
             if (id > 0)
             {
                 var userService = this.GetService<IUserService>();
@@ -109,13 +107,12 @@ namespace AfxTcpFileServerSample.Controllers
                 return Success();
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.System)]
-        public ActionResult Add()
+        public ActionResult Add(UserInfoDto vm)
         {
-            var vm = this.GetData<UserInfoDto>();
             if (vm != null && !string.IsNullOrEmpty(vm.Account) && !string.IsNullOrEmpty(vm.Name))
             {
                 var userService = this.GetService<IUserService>();
@@ -125,13 +122,12 @@ namespace AfxTcpFileServerSample.Controllers
                 }
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.System)]
-        public ActionResult Update()
+        public ActionResult Update(UserInfoDto vm)
         {
-            var vm = this.GetData<UserInfoDto>();
             if (vm != null && vm.Id > 0 && !string.IsNullOrEmpty(vm.Name))
             {
                 var userService = this.GetService<IUserService>();
@@ -141,7 +137,7 @@ namespace AfxTcpFileServerSample.Controllers
                 }
             }
 
-            return ParamError();
+            return Error();
         }
     }
 }

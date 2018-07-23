@@ -13,9 +13,8 @@ namespace AfxTcpFileServerSample.Controllers
     public class RoleController : BaseController
     {
         [Auth(AuthType.System)]
-        public ActionResult Get()
+        public ActionResult Get(int id)
         {
-            int id = this.GetData<int>();
             if (id > 0)
             {
                 var roleService = this.GetService<IRoleService>();
@@ -26,13 +25,12 @@ namespace AfxTcpFileServerSample.Controllers
                 }
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.System)]
-        public ActionResult GetList()
+        public ActionResult GetList(RoleInfoListParamDto vm)
         {
-            RoleInfoListParamDto vm = this.GetData<RoleInfoListParamDto>();
             if (vm != null)
             {
                 var roleService = this.GetService<IRoleService>();
@@ -40,13 +38,12 @@ namespace AfxTcpFileServerSample.Controllers
                 return Success(list);
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.System)]
-        public ActionResult Add()
+        public ActionResult Add(RoleInfoDto vm)
         {
-            var vm = this.GetData<RoleInfoDto>();
             if(vm != null && !string.IsNullOrEmpty(vm.Name))
             {
                 var roleService = this.GetService<IRoleService>();
@@ -56,13 +53,12 @@ namespace AfxTcpFileServerSample.Controllers
                 }
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.System)]
-        public ActionResult Update()
+        public ActionResult Update(RoleInfoDto vm)
         {
-            var vm = this.GetData<RoleInfoDto>();
             if (vm != null && vm.Id > 0 && !string.IsNullOrEmpty(vm.Name))
             {
                 var roleService = this.GetService<IRoleService>();
@@ -72,13 +68,12 @@ namespace AfxTcpFileServerSample.Controllers
                 }
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.System)]
-        public ActionResult Delete()
+        public ActionResult Delete(int id)
         {
-            var id = this.GetData<int>();
             if (id > 0 )
             {
                 var roleService = this.GetService<IRoleService>();
@@ -88,13 +83,12 @@ namespace AfxTcpFileServerSample.Controllers
                 }
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.System)]
-        public ActionResult Exist()
+        public ActionResult Exist(string name)
         {
-            var name = this.GetData<string>();
             if (!string.IsNullOrEmpty(name))
             {
                 var roleService = this.GetService<IRoleService>();
@@ -102,13 +96,12 @@ namespace AfxTcpFileServerSample.Controllers
                 return Success(result);
             }
 
-            return ParamError();
+            return Error();
         }
 
         [Auth(AuthType.System)]
-        public ActionResult GetUserCount()
+        public ActionResult GetUserCount(int id)
         {
-            int id = this.GetData<int>();
             if (id > 0)
             {
                 var roleService = this.GetService<IRoleService>();
@@ -116,7 +109,7 @@ namespace AfxTcpFileServerSample.Controllers
                 return Success(count);
             }
 
-            return ParamError();
+            return Error();
         }
     }
 }

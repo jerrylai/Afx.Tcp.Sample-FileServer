@@ -28,12 +28,33 @@ namespace AfxTcpFileServerSample.Controllers
 
         protected virtual T GetService<T>(string name, object[] args) where T : IBaseService => IocUtils.Get<T>(name, args);
 
+        protected virtual ActionResult Error()
+        {
+            return base.ParamError();
+        }
+
+        protected virtual ActionResult Error(string error)
+        {
+            return base.ParamError(error);
+        }
+
         public override void Dispose()
         {
             this.UserInfo = null;
             SessionUtils.UserInfo = null;
 
             base.Dispose();
+        }
+
+        public override void OnException(ExceptionContext context)
+        {
+            if(context.Exception is StatusException)
+            {
+                var ex = context.Exception as StatusException;
+                context.IsHandle = true;
+                context.Result = new ActionResult();
+                context.Result.SetMsg(ex.Status, ex.Message);
+            }
         }
     }
 }
