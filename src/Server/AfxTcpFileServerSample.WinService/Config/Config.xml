@@ -10,7 +10,7 @@
         <MSSQLServer connectionString="Data Source=127.0.0.1,1433;Initial Catalog=AfxDotNetSample;User ID=sa;Password=123456" />
         <Oracle connectionString="Data Source=127.0.0.1:1521/ORCL;User ID=AfxDotNetSample;Password=123" />
         <Cache type="Proc" prefix="AfxTcpFileServerSample:" />
-        <Redis config="127.0.0.1:6379,syncTimeout=3000,preserveAsyncOrder=false,name=AfxTcpFileServerSample" />
+        <Redis config="127.0.0.1:6379,syncTimeout=3000,name=AfxTcpFileServerSample" />
         <IdGenerator serverId="1000" cacheCount="10" />
     </Root>
     <Ioc>

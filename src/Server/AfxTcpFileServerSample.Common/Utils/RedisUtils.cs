@@ -13,6 +13,7 @@ namespace AfxTcpFileServerSample.Common
             con.ConnectionFailed += OnConnectionFailed;
             con.ErrorMessage += OnErrorMessage;
             con.InternalError += OnInternalError;
+            con.PreserveAsyncOrder = false;
             return con;
         }, false);
 
