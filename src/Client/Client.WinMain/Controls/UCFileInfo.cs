@@ -14,6 +14,7 @@ using AfxTcpFileServerSample.Enums;
 using AfxTcpFileServerSample.Dto.ProtoBuf;
 using Client.IService;
 using System.Threading;
+using Afx.Ioc;
 
 namespace Client.WinMain
 {

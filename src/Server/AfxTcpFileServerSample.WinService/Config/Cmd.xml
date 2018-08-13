@@ -45,6 +45,5 @@
         <Action cmd="11014" method="GetPhysicaPath" type="AfxTcpFileServerSample.Controllers.FileController"></Action>
         <Action cmd="11015" method="AddFileInfo" type="AfxTcpFileServerSample.Controllers.FileController"></Action>
         
-        
     </Controller>
 </Cmd>

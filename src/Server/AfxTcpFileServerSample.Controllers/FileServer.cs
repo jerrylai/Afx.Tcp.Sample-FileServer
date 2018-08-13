@@ -7,6 +7,7 @@ using Afx.Tcp.Host;
 using AfxTcpFileServerSample.Common;
 using AfxTcpFileServerSample.Dto;
 using AfxTcpFileServerSample.IService;
+using Afx.Ioc;
 
 namespace AfxTcpFileServerSample.Controllers
 {

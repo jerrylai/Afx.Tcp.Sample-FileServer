@@ -14,6 +14,9 @@ namespace AfxTcpFileServerSample.WinService
         /// </summary>
         static void Main()
         {
+            System.IO.Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
+            IocRegister.Register();
+            Common.ConfigUtils.SetThreads();
 #if DEBUG
             using (var server = new Controllers.FileServer())
             {

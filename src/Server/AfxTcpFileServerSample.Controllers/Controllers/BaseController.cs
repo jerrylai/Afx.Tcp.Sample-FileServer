@@ -6,6 +6,7 @@ using System.Text;
 using AfxTcpFileServerSample.IService;
 using AfxTcpFileServerSample.Common;
 using Afx.Tcp.Host;
+using Afx.Ioc;
 
 namespace AfxTcpFileServerSample.Controllers
 {

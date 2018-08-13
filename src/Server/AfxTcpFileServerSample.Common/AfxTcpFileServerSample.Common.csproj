@@ -30,11 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Afx.Base, Version=6.2.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Base.6.2.11\lib\net452\Afx.Base.dll</HintPath>
+    <Reference Include="Afx.Base, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Base.6.3.1\lib\net452\Afx.Base.dll</HintPath>
     </Reference>
-    <Reference Include="Afx.Cache, Version=6.2.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Cache.6.2.11\lib\net452\Afx.Cache.dll</HintPath>
+    <Reference Include="Afx.Cache, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Cache.6.3.1\lib\net452\Afx.Cache.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
@@ -65,7 +65,6 @@
     <Compile Include="Utils\CacheKeyUtils.cs" />
     <Compile Include="Utils\ConfigUtils.cs" />
     <Compile Include="Utils\EncryptUtils.cs" />
-    <Compile Include="Utils\IocUtils.cs" />
     <Compile Include="Utils\JsonUtils.cs" />
     <Compile Include="Utils\LogUtils.cs" />
     <Compile Include="Utils\SessionUtils.cs" />

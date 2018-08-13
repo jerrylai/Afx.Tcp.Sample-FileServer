@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Afx.Ioc;
 using StackExchange.Redis;
 
 namespace AfxTcpFileServerSample.Common
@@ -8,14 +9,7 @@ namespace AfxTcpFileServerSample.Common
     public static class RedisUtils
     {
         private static Lazy<IConnectionMultiplexer> _default = new Lazy<IConnectionMultiplexer>(() =>
-        {
-            var con = ConnectionMultiplexer.Connect(ConfigUtils.RedisConfig);
-            con.ConnectionFailed += OnConnectionFailed;
-            con.ErrorMessage += OnErrorMessage;
-            con.InternalError += OnInternalError;
-            con.PreserveAsyncOrder = false;
-            return con;
-        }, false);
+            IocUtils.GetSingle<IConnectionMultiplexer>(), false);
 
         public static IConnectionMultiplexer Default => _default.Value;
 

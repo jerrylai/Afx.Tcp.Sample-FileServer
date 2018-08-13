@@ -9,6 +9,7 @@ using AfxTcpFileServerSample.IRepository;
 using AfxTcpFileServerSample.ICache;
 using System.Linq.Expressions;
 using AfxTcpFileServerSample.Dto.ProtoBuf;
+using Afx.Ioc;
 
 namespace AfxTcpFileServerSample.Repository
 {

@@ -10,6 +10,7 @@ using System.Threading;
 using System.Windows.Forms;
 
 using Afx.Forms.Controls;
+using Afx.Ioc;
 using AfxTcpFileServerSample.Enums;
 using Client.Common;
 using Client.IService;

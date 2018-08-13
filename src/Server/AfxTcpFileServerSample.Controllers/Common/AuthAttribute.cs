@@ -8,6 +8,7 @@ using AfxTcpFileServerSample.IService;
 using Afx.Tcp.Host;
 using Afx.Tcp.Protocols;
 using AfxTcpFileServerSample.Common;
+using Afx.Ioc;
 
 namespace AfxTcpFileServerSample.Controllers
 {

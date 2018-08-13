@@ -30,20 +30,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Afx.Base, Version=6.2.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Base.6.2.11\lib\net452\Afx.Base.dll</HintPath>
+    <Reference Include="Afx.Base, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Base.6.3.1\lib\net452\Afx.Base.dll</HintPath>
     </Reference>
-    <Reference Include="Afx.Sockets, Version=6.2.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Sockets.6.2.11\lib\net452\Afx.Sockets.dll</HintPath>
+    <Reference Include="Afx.Sockets, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Sockets.6.3.1\lib\net452\Afx.Sockets.dll</HintPath>
     </Reference>
-    <Reference Include="Afx.Tcp.Host, Version=6.2.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Tcp.Host.6.2.11\lib\net452\Afx.Tcp.Host.dll</HintPath>
+    <Reference Include="Afx.Tcp.Host, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Tcp.Host.6.3.1\lib\net452\Afx.Tcp.Host.dll</HintPath>
     </Reference>
-    <Reference Include="Afx.Tcp.Protocols, Version=6.2.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Tcp.Protocols.6.2.11\lib\net452\Afx.Tcp.Protocols.dll</HintPath>
+    <Reference Include="Afx.Tcp.Protocols, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Tcp.Protocols.6.3.1\lib\net452\Afx.Tcp.Protocols.dll</HintPath>
     </Reference>
-    <Reference Include="protobuf-net, Version=2.3.13.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
-      <HintPath>..\packages\protobuf-net.2.3.13\lib\net40\protobuf-net.dll</HintPath>
+    <Reference Include="protobuf-net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.3.17\lib\net40\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -71,9 +71,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\AfxTcpFileServerSample.Common\AfxTcpFileServerSample.Common.csproj">
       <Project>{82c44898-5782-4348-83ab-7624dbb17494}</Project>
       <Name>AfxTcpFileServerSample.Common</Name>
@@ -90,6 +87,9 @@
       <Project>{6a4237c2-0cd8-4a95-9667-bd86b364be7b}</Project>
       <Name>AfxTcpFileServerSample.IService</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

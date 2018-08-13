@@ -15,7 +15,8 @@ namespace Client.WinMain
         [STAThread]
         static void Main()
         {
-            Environment.CurrentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            System.IO.Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
+            IocRegister.Register();
             bool createdNew = false;
             using (Mutex mutex = new Mutex(true, "Client.WinMain", out createdNew))
             {

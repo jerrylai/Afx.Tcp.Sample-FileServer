@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<IocRegister>
+    <Register base="AfxTcpFileServerSample.IService.IBaseService,AfxTcpFileServerSample.IService" value="AfxTcpFileServerSample.Service" />
+
+    <Register base="AfxTcpFileServerSample.IRepository.IBaseRepository,AfxTcpFileServerSample.IRepository" value="AfxTcpFileServerSample.Repository" />
+
+    <Register base="AfxTcpFileServerSample.ICache.IBaseCache,AfxTcpFileServerSample.ICache" value="AfxTcpFileServerSample.Cache" />
+</IocRegister>
+

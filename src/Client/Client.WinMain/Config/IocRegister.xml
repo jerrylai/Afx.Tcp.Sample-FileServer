@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<IocRegister>
+    <Register base="Client.IService.IBaseService,Client.IService" value="Client.Service" />
+</IocRegister>

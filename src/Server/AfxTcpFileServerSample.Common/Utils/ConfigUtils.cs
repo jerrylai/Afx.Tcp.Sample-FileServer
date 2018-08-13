@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Afx.Ioc;
 using Afx.Utils;
 using Afx.Configuration;
 using AfxTcpFileServerSample.Enums;
@@ -16,10 +17,7 @@ namespace AfxTcpFileServerSample.Common
         public const int MAX_FILE_DATA_SIZE = 7 * 1024;
 
         private static Lazy<XmlConfig> _configuration = new Lazy<XmlConfig>(() =>
-         {
-             var config = new XmlConfig("Config/Config.xml", false);
-             return config;
-         }, false);
+          IocUtils.GetSingle<XmlConfig>(), false);
 
         public static XmlConfig Configuration => _configuration.Value;
         

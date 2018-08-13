@@ -32,26 +32,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Afx.Data, Version=6.2.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Data.6.2.11\lib\net452\Afx.Data.dll</HintPath>
+    <Reference Include="Afx.Data, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.6.3.1\lib\net452\Afx.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Afx.Data.Entity, Version=6.2.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Data.Entity.6.2.11\lib\net452\Afx.Data.Entity.dll</HintPath>
+    <Reference Include="Afx.Data.Entity, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.Entity.6.3.1\lib\net452\Afx.Data.Entity.dll</HintPath>
     </Reference>
-    <Reference Include="Afx.Data.Extensions, Version=6.2.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Data.Extensions.6.2.11\lib\net452\Afx.Data.Extensions.dll</HintPath>
+    <Reference Include="Afx.Data.Extensions, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.Extensions.6.3.1\lib\net452\Afx.Data.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Afx.Data.MSSQLServer.Entity, Version=6.2.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Data.MSSQLServer.Entity.6.2.11\lib\net452\Afx.Data.MSSQLServer.Entity.dll</HintPath>
+    <Reference Include="Afx.Data.MSSQLServer.Entity, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.MSSQLServer.Entity.6.3.1\lib\net452\Afx.Data.MSSQLServer.Entity.dll</HintPath>
     </Reference>
-    <Reference Include="Afx.Data.MySql.Entity, Version=6.2.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Data.MySql.Entity.6.2.11\lib\net452\Afx.Data.MySql.Entity.dll</HintPath>
+    <Reference Include="Afx.Data.MySql.Entity, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.MySql.Entity.6.3.1\lib\net452\Afx.Data.MySql.Entity.dll</HintPath>
     </Reference>
-    <Reference Include="Afx.Data.Oracle.Entity, Version=6.2.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Data.Oracle.Entity.6.2.11\lib\net452\Afx.Data.Oracle.Entity.dll</HintPath>
+    <Reference Include="Afx.Data.Oracle.Entity, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.Oracle.Entity.6.3.1\lib\net452\Afx.Data.Oracle.Entity.dll</HintPath>
     </Reference>
-    <Reference Include="Afx.Data.SQLite.Entity, Version=6.2.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Data.SQLite.Entity.6.2.11\lib\net452\Afx.Data.SQLite.Entity.dll</HintPath>
+    <Reference Include="Afx.Data.SQLite.Entity, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Data.SQLite.Entity.6.3.1\lib\net452\Afx.Data.SQLite.Entity.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -59,8 +59,8 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Protobuf, Version=3.6.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Protobuf.3.6.0\lib\net45\Google.Protobuf.dll</HintPath>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.10.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.6.10.7\lib\net452\MySql.Data.dll</HintPath>

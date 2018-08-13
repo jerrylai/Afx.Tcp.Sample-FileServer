@@ -11,6 +11,7 @@ using Client.IService;
 using AfxTcpFileServerSample.Dto.ProtoBuf;
 using Client.Common;
 using Afx.Forms.Controls;
+using Afx.Ioc;
 
 namespace Client.WinMain
 {
