@@ -33,14 +33,14 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Afx.Base, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Base.6.3.1\lib\net452\Afx.Base.dll</HintPath>
+    <Reference Include="Afx.Base, Version=6.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Base.6.3.3\lib\net452\Afx.Base.dll</HintPath>
     </Reference>
-    <Reference Include="Afx.Sockets, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Sockets.6.3.1\lib\net452\Afx.Sockets.dll</HintPath>
+    <Reference Include="Afx.Sockets, Version=6.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Sockets.6.3.3\lib\net452\Afx.Sockets.dll</HintPath>
     </Reference>
-    <Reference Include="Afx.Tcp.Protocols, Version=6.3.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Afx.Tcp.Protocols.6.3.1\lib\net452\Afx.Tcp.Protocols.dll</HintPath>
+    <Reference Include="Afx.Tcp.Protocols, Version=6.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afx.Tcp.Protocols.6.3.3\lib\net452\Afx.Tcp.Protocols.dll</HintPath>
     </Reference>
     <Reference Include="protobuf-net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
       <HintPath>..\packages\protobuf-net.2.3.17\lib\net40\protobuf-net.dll</HintPath>
